@@ -2,40 +2,207 @@
 
 <html>
   <head>
+    <title>My Portfolio</title>
     <style>
+        body {
+          background-color: #14213d;
+        }
+
         .flex-container {
             display: flex;
-            height: 300px;
-            border-style: solid;
-            border-width: 5px;
-            border-color: black;
+            height: 500px;
 
-            flex-direction: row;
+            flex-direction: column;
             flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: baseline;
-            align-content: space-between;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+
+            /* border-style: solid;
+            border-color: aliceblue;
+            border-width: 10px; */
+
+
+            color: aliceblue;
         }
 
         .flex-item {
-            height: 100px;
-            width: 100px;
-            border-style: solid;
-            border-width: 2px;
-            border-color: red;
+            height: 50px;
+            width: 50px;
+            align-items: center;
+            text-align: center;
+        }
+
+        .flex-item1 {
+          border-style: solid; border-color: #4d6fb2; 
+          background-color: #4d6fb2;
+          border-style: solid; border-color: #2b3d62; 
+        }
+
+        #navbar {
+          background-color: #001524;
+          color: white;
+          height: 60px;
+
+          justify-content: space-around;
+          align-items: center;
+
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          font-weight: 500;
+
+
+        }
+
+        #photo {
+          background-color: #be7a0b;
+        }
+
+        #footer {
+          background-color: #15616d;
+
+          height: 100px;
+        }
+
+        #sanda {
+          flex-direction: row;
+          height: 250px;
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+          align-items: center;
+          font-weight: 400;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #autobiography {
+          height: 300px;
+          width: 50%;
+          justify-content: center;
+          gap: 10px;
+          border-style: solid; border-color: #2b3d62; 
+          background-color: #4d6fb2;
+        }
+
+        #skills {
+          height: 300px;
+          border-style: solid; border-color: #2b3d62; 
+          width: 47%;
+          justify-content: center;
+          gap: 10px;
+          background-color: #be7a0b;
+        }
+
+        #projects {
+          border-style: solid; border-color: #2b3d62; 
+          align-items: center;
+          justify-content: baseline;
+          font-weight: 500;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
 
     </style>
   </head>
 
   <body>
-    <div class="flex-container">
-        <div class="flex-item">1</div> 
-        <div class="flex-item" style="flex:2;">2</div> 
-        <div class="flex-item" style="order:3; flex:3;">3</div> 
-        <div class="flex-item">4</div> 
-        <div class="flex-item">5</div> 
-    </div>   
+    <header>
+      <div class="flex-container" id="navbar">
+        <div class="flex-item">
+          <img src="img/logo.png" alt="Logo of myself" height="50px" width="50px">
+        </div>
+        <div class="flex-item">
+          <a href="#projects" style="text-decoration: none; color:white;"><br>PROJECTS</a>
+        </div> 
+        <div class="flex-item">
+          <a href="#autobiography" style="text-decoration: none; color:white;"><br>AUTOBIOGRAPHY</a>
+        </div> 
+        <div class="flex-item">
+          <a href="#skills" style="text-decoration: none; color:white;"><br>SKILLS</a>
+        </div> 
+        <div class="flex-item">
+          <a href="#footer" style="text-decoration: none; color:white;"><br>ABOUT</a>
+        </div> 
+      </div>   
+    </header>
+
+    <br>
+
+    <div class="flex-container" id="photo" style="object-fit: cover; text-align: center;">
+      <div class="flex-item" style="height: 500px; width: auto;">
+        <img src="img/featured.png" alt="Gameplay of Shoot-I-Give-Up" style="height: 500px ;">
+        <h1 style="position: absolute; top: 250px; left: 555px; font-weight: 1000; font-family: Verdana, Geneva, Tahoma, sans-serif;"> My First Java Project</h1>
+      </div>
+    </div>
+    <br>
+    <div class="flex-container" id="projects">
+      <div class="flex-item" style="width: 450px; height: 450px;">
+        <br><br><br>
+        <h2>Previous Projects</h2>
+        <img src="img/folder.png" style="height: 200px; width: 200px;">
+      </div>     
+      <div class="flex-item" style="width: 450px; height: 450px;">
+        <h2>Shoot-I-Give-Up</h2>
+        <img src="img/project1.png" style="height: 260px; width: 400px;">
+        <p> A Simple action, survival, top-down shoot 'em up game made in Java.</p>
+      </div>    
+      <div class="flex-item" style="width: 450px; height: 450px;">
+        <h2>Solver for Regression and Interpolation</h2>
+        <img src="img/project2.png" style="height: 260px; width: 400px;">
+        <p> A calculator app that solves Polynomial Regression and Quadratic Spline Interpolation. There is also a Diet Problem Solver.</p>
+      </div>    
+    </div>
+
+    <br>
+    <br>
+
+
+    <div class="flex-container" id="sanda">
+      <div class="flex-item" id="autobiography">
+          <h3>Autobiography</h3>
+          <p>Aaron Jacob C. Perez, most commonly referred to as Aaron by his peers, was born in Las Pinas City at December 25,2003. He graduated from elementary school at Mayflower Academy of Las Pinas City and Highschool at Las Pinas City National Science Highschool. He is a second year Computer Science student currently studying for his undergraduate degree in the University of the Philippines - Los Banos. He dreams of finishing up his studies and pursuing game development full-time.</p>
+
+      </div>
+  
+      <div class="flex-container" id="skills">
+        <div class="flex-item" style="width: 600px;">
+          <h3>Skills</h3>
+        </div>
+        
+        <div class="flex-item1" style="width: 300px; height: 30px;">
+          Knowledge in C, Python and Java
+        </div>
+        <div class="flex-item1" style="width: 200px; height: 30px;">
+          Team worker
+        </div>
+        <div class="flex-item1" style="width: 200px; height: 30px;">
+          Critical-thinking
+        </div>
+        <div class="flex-item1" style="width: 200px; height: 30px;">
+          Problem-solver
+        </div>
+        <div class="flex-item1" style="width: 300px; height: 30px;">
+          Fluent in English and Filipino
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="flex-container" id="footer">
+      <img src="img/logo.png" alt="Logo of myself" height="50px" width="50px" >
+      <footer>
+        <p>Author: Aaron Perez
+          <br>
+          Email: aaronperez@gmail.com
+          <br>
+          Contact me at: 09201234567
+          <br>
+          <a href="#" style="text-decoration: none; color:white;">Back to top</a>
+
+
+        </p>
+      </footer>
+    </div>
+
   </body>
 
 </html>
