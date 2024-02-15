@@ -2,14 +2,40 @@
 
 <html>
   <head>
-    <title>Sample Web Page</title>
+    <style>
+        .flex-container {
+            display: flex;
+            height: 300px;
+            border-style: solid;
+            border-width: 5px;
+            border-color: black;
+
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            align-content: space-between;
+        }
+
+        .flex-item {
+            height: 100px;
+            width: 100px;
+            border-style: solid;
+            border-width: 2px;
+            border-color: red;
+        }
+
+    </style>
   </head>
 
   <body>
-    <h1>This is a heading</h1>
-    <p>This is the first paragraph of text</p>
-    <hr />
-    <p>This is the second paragraph of text</p>
+    <div class="flex-container">
+        <div class="flex-item">1</div> 
+        <div class="flex-item" style="flex:2;">2</div> 
+        <div class="flex-item" style="order:3; flex:3;">3</div> 
+        <div class="flex-item">4</div> 
+        <div class="flex-item">5</div> 
+    </div>   
   </body>
 
 </html>
